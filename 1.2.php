@@ -1,5 +1,5 @@
 <?php
-function getEqualSumOfNumbers($number)
+function getEqualSumOfNumbers(int $number)
 {
     for ($i = 1000; $i <= 9999; $i++) {
         $current_number = $i;

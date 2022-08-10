@@ -1,17 +1,16 @@
 <?php
-// Определить  количество  цифр,  меньших  5,  используемых  при  записи натурального числа N
-function getNumsInNaturalNumber(int $number)
+function getNumbers(int $number)
 {
-    $numbersLessFiveQuantity = 0;
+    $counter = 0;
     while ($number > 0) {
         $lessNumber = $number / 10;
-        $last_number = intval(($lessNumber - intval($lessNumber)) * 10);
-        if ($last_number < 5) {
-            $numbersLessFiveQuantity++;
+        $lastNumber = intval(($lessNumber - intval($lessNumber)) * 10);
+        if ($lastNumber < 5) {
+            $counter++;
         }
         $number = intval($lessNumber);
     }
-    return $numbersLessFiveQuantity;
+    return $counter;
 }
 
-echo getNumsInNaturalNumber(5340982);
+echo getNumbers(5340982);
