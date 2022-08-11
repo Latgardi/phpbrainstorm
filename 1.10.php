@@ -23,4 +23,5 @@ function getSqrPalindromes(int $number)
     }
 }
 
+
 getSqrPalindromes(100000);
