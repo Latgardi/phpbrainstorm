@@ -1,5 +1,4 @@
 <?php
-// Найти наименьшее общее кратное  (НОК)  двух натуральных чисел N и M.
 function getGCD(int $n, int $m): int
 {
     $greaterNum = max($n, $m);
