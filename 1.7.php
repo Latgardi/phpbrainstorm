@@ -1,5 +1,5 @@
 <?php
-function areEqualNumbers($number)
+function areEqualNumbers(int $number): bool
 {
     for ($number; $number > 0; $number = intdiv($number, 10)) {
         $lastNum = $number % 10;
