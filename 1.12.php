@@ -1,5 +1,5 @@
 <?php
-function isSimple($number)
+function isPrime($number): bool
 {
     if ($number <= 1) {
         return false;
@@ -12,4 +12,4 @@ function isSimple($number)
     return true;
 }
 
-var_dump(isSimple(10006721));
+var_dump(isPrime(10006721));
