@@ -8,11 +8,11 @@ function factorial($number)
     }
 }
 
-function getFactorionSum($number)
+function getFactorionSum($m)
 {
     $resultSum = 0;
     $quantity = 0;
-    for ($i = 1; $i <= $number; $i++) {
+    for ($i = 1; $i <= $m; $i++) {
         $sum = 0;
         for ($j = $i; $j > 0; $j = intdiv($j, 10)) {
             $lastNum = $j % 10;
