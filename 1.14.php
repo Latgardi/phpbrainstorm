@@ -1,5 +1,5 @@
 <?php
-function isPrime($number)
+function isPrime(int $number): bool
 {
     for ($i = 2; $i <= sqrt($number); $i++) {
         if ($number % $i == 0) {
