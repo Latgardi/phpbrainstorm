@@ -1,5 +1,5 @@
 <?php
-function getNumbers(int $number)
+function getNumbers(int $number): int
 {
     $counter = 0;
     while ($number > 0) {

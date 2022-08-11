@@ -11,7 +11,7 @@ function toBin(int $number): string
 
 /* рассматривал также вариант записи алфавита системы в строку и вызова по индексу, но подумал,
    что это не подходит под условие */
-function toHex($number)
+function toHex(int $number): string
 {
     $result = "";
     while ($number > 0) {

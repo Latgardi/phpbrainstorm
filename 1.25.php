@@ -1,5 +1,5 @@
 <?php
-function factorial($number)
+function factorial(int $number): int
 {
     if ($number == 0) {
         return 1;
@@ -8,7 +8,7 @@ function factorial($number)
     }
 }
 
-function getFactorionSum($m)
+function getFactorionSum(int $m): array
 {
     $resultSum = 0;
     $quantity = 0;

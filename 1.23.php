@@ -1,5 +1,5 @@
 <?php
-function directOrder($number)
+function directOrder(int $number): int
 {
     $result = 0;
     for ($i = 0; $i <= 9; $i++) {
