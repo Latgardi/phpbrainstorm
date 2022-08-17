@@ -1,5 +1,6 @@
 <?php
-function trace($matrix) {
+function trace(array $matrix): int
+{
     $result = 0;
     for ($i = 0, $iMax = count($matrix);
          $i < $iMax;
@@ -9,7 +10,8 @@ function trace($matrix) {
     return $result;
 }
 
-function lowerSum($matrix) {
+function lowerSum(array $matrix): int
+{
     $result = 0;
     for ($i = 1, $iMax = count($matrix);
          $i < $iMax;
@@ -21,12 +23,15 @@ function lowerSum($matrix) {
     return $result;
 }
 
-function upperSum($matrix) {
+function upperSum(array $matrix): int
+{
     $result = 0;
     for ($i = 0, $j = 1, $iMax = count($matrix);
          $i < $iMax;
          $i++, $j++) {
-        for ($k = $j, $kMax = count($matrix[$i]); $k < $kMax; $k++) {
+        for ($k = $j, $kMax = count($matrix[$i]);
+             $k < $kMax;
+             $k++) {
             $result += $matrix[$i][$k];
         }
     }
@@ -34,9 +39,9 @@ function upperSum($matrix) {
 }
 
 $matrix = [[0, 1, 7, 3],
-    [4, 3, 8, 2],
-    [3, 4, 6, 3],
-    [2, 7, 2, 7]];
+            [4, 3, 8, 2],
+            [3, 4, 6, 3],
+            [2, 7, 2, 7]];
 
 echo trace($matrix) . "\n";
 echo lowerSum($matrix) . "\n";
