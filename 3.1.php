@@ -38,10 +38,11 @@ function upperSum(array $matrix): int
     return $result;
 }
 
-$matrix = [[0, 1, 7, 3],
-            [4, 3, 8, 2],
-            [3, 4, 6, 3],
-            [2, 7, 2, 7]];
+$matrix =
+        [[0, 1, 7, 3],
+        [4, 3, 8, 2],
+        [3, 4, 6, 3],
+        [2, 7, 2, 7]];
 
 echo trace($matrix) . "\n";
 echo lowerSum($matrix) . "\n";

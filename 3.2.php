@@ -7,7 +7,9 @@ function lessAverage(array $matrix): int
         $sum = 0;
         $columns = count($matrix[$i]);
         for ($j = 0; $j < $columns; $j++) {
-            $sum += $matrix[$i][$j];
+            if ($matrix[$i][$j] > 0) {
+                $sum += $matrix[$i][$j];
+            }
         }
         $currentAv = $sum / $columns;
         if ($currentAv < $av or $i == 0) {
@@ -19,10 +21,10 @@ function lessAverage(array $matrix): int
 }
 
 $matrix =
-    [[9, 1, 7, 3],
-        [4, 3, 8, 2],
+        [[9, 1, -7, 3],
+        [-4, 3, -8, 2],
         [3, 4, 6, 3],
-        [2, 7, 2, 7],
-        [4, 2, 5, 1]];
+        [2, -7, 2, 7],
+        [4, 2, 5, -1]];
 
 echo lessAverage($matrix);
