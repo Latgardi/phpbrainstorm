@@ -1,5 +1,5 @@
 <?php
-function extremes($row)
+function extremes(array $row): ?array
 {
     $asc = false;
     $desc = false;
@@ -37,7 +37,7 @@ function extremes($row)
     return null;
 }
 
-function checkStrings($matrix): array
+function checkStrings(array $matrix): array
 {
     $result = array();
     for ($i = 0, $iMax = count($matrix); $i < $iMax; $i++) {
