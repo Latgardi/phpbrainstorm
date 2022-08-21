@@ -10,32 +10,19 @@ function trace(array $matrix): int
     return $result;
 }
 
-function lowerSum(array $matrix): int
+function sums(array $matrix): array
 {
-    $result = 0;
+    $lowerSum = 0;
+    $upperSum = 0;
     for ($i = 1, $iMax = count($matrix);
          $i < $iMax;
          $i++) {
-        for ($k = 0; $k < $i; $k++) {
-            $result += $matrix[$i][$k];
+        for ($j = 0; $j < $i; $j++) {
+            $lowerSum += $matrix[$i][$j];
+            $upperSum += $matrix[($iMax - 1) - $i][($iMax - 1) - $j];
         }
     }
-    return $result;
-}
-
-function upperSum(array $matrix): int
-{
-    $result = 0;
-    for ($i = 0, $j = 1, $iMax = count($matrix);
-         $i < $iMax;
-         $i++, $j++) {
-        for ($k = $j, $kMax = count($matrix[$i]);
-             $k < $kMax;
-             $k++) {
-            $result += $matrix[$i][$k];
-        }
-    }
-    return $result;
+    return array("lower_sum" => $lowerSum, "upper_sum" => $upperSum);
 }
 
 $matrix =
@@ -45,5 +32,4 @@ $matrix =
         [2, 7, 2, 7]];
 
 echo trace($matrix) . "\n";
-echo lowerSum($matrix) . "\n";
-echo upperSum($matrix) . "\n";
+var_dump(sums($matrix));
