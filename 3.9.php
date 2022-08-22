@@ -1,5 +1,5 @@
 <?php
-function changeNumbers($array)
+function changeNumbers(array $array): array
 {
     for ($i = 0, $iMax = count($array); $i < $iMax; $i++) {
         $number = abs($array[$i]);
@@ -12,7 +12,7 @@ function changeNumbers($array)
     return $array;
 }
 
-function checkMatrix($matrix)
+function checkMatrix(array $matrix): array
 {
     for ($i = 0, $iMax = count($matrix[$i]); $i < $iMax; $i++) {
         $column = array();

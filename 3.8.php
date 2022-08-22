@@ -6,7 +6,7 @@ $matrix =
         [-2, -8, -12, -67],
         [477, 2, 5, 1]];
 
-function swapElems($matrix)
+function swapElems(array $matrix): array
 {
     $min = 0;
     $max = 0;
