@@ -8,7 +8,7 @@ function zeroRow(int $length): array
     return $row;
 }
 
-function moveZeroStrings(array $matrix): array
+function moveZeroRows(array $matrix): array
 {
     $newMatrix = array();
     $zeroStrings = 0;
@@ -43,4 +43,4 @@ $matrix =
         [0, 1, 0, 0],
         [0, 0, 0, 0,]];
 
-var_dump(moveZeroStrings($matrix));
+var_dump(moveZeroRows($matrix));

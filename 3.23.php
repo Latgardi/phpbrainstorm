@@ -1,5 +1,5 @@
 <?php
-function swapStrings(array $matrix): array
+function swapRows(array $matrix): array
 {
     $newMatrix = array();
     $posElems = array();
@@ -30,4 +30,4 @@ $matrix = [[4, 1, 0, 1],
     [-7, 3, 0, 6],
     [3, 2, 6, 3]];
 
-var_dump(swapStrings($matrix));
+var_dump(swapRows($matrix));

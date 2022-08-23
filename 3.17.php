@@ -1,5 +1,5 @@
 <?php
-function alterString($matrix)
+function alterRow(array $matrix): array
 {
     $newMatrix = array();
     $alternate = array();
@@ -54,4 +54,4 @@ $matrix =
         [3, 1, 0, 3],
         [-7, 0, 0, 6]];
 
-var_dump(alterString($matrix));
+var_dump(alterRow($matrix));
